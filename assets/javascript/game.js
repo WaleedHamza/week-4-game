@@ -1,3 +1,6 @@
+$(document).ready(function(){
+//code below this line
+
 // game objects each contains a character
 var kenshi = {
     name: "Kenshi",
@@ -46,5 +49,23 @@ $("#selectFighter").on("click", ".card", function (event) {
     }
 });
 
-// add a function to stop inserting fighters in the opponent div when reach is 3
-// fighters// add charectors attack and helth etc. values//
+
+
+// add a function to stop inserting fighters in the opponent div when reach is 3 fighters
+
+
+
+// add charectors attack and helth etc. values//
+
+
+
+
+
+//display charactors values on the card corners//
+
+
+//add function to reset the game// 
+
+
+//keep your code above this line//
+});
