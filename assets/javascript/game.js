@@ -49,7 +49,15 @@ $("#selectFighter").on("click", ".card", function (event) {
     }
 });
 
-
+//if 3 fighters were in the opponent section then stop the click function//
+//reset the opponent section fighters//
+var opponentSelected = false
+$("#opponenet").on("click", ".card", function(event) {
+    if (opponentSelected === true){
+        opponentSelected =false;
+    $("#selectFigher").append($(this))
+    }
+})
 
 // add a function to stop inserting fighters in the opponent div when reach is 3 fighters
 
@@ -65,6 +73,8 @@ $("#selectFighter").on("click", ".card", function (event) {
 
 
 //add function to reset the game// 
+
+
 
 
 //keep your code above this line//

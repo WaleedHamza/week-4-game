@@ -1,7 +1,6 @@
 body {
     padding: 30px;
-    background-image: url("../images/background.png");
-    background-position: center;
+    background-image: url("../images/background2.png");
     background-repeat: repeat;
     background-size: cover;
     background-image: fixed;
@@ -20,23 +19,25 @@ h3 {
 
 #selectFighter {
     width: 100%;
-    display: inline-block;
     margin: 0 auto;
     align-content: center;
-    content: attr(data-placeholder);
+    display: flex;
+    justify-content: center;
+    
 }
 
 #myFighter,
 #opponent {
     position: relative;
-    border: 1px solid tan;
     height: 200px;
+    display: flex;
+    justify-content: center;
 
 }
 
 .card {
     position: relative;
-    left: 20px;
+    justify-content: center;
     border: 1px solid goldenrod;
     background-color: black;
     width: 150px;
@@ -53,6 +54,13 @@ img {
 .actionButtons {
     background-color: black;
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#gameRules {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
