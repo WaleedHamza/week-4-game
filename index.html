@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>week-4-game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <script src="assets/game.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>week-4-game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
-    
-</body>
+    </head>
+    <body>
+
+        <div id="header">
+            <h1>Mortal "C"ombat</h1>
+        </div>
+
+        <h3>Pick Your Champion</h3>
+        <div id="selectFighter" class="row">
+            <!--change the id to a class for all fighters -->
+            <div id="kenshi" class="col-sm-2 card">
+                <img src="./assets/images/kenshi.png">Kenshi</div>
+
+            <div id="subzero" class="col-sm-2 card ">
+                <img src="./assets/images/sub-zero.png">Sub Zero</div>
+
+            <div id="scorpion" class="col-sm-2 card ">
+                <img src="./assets/images/scorpion.png">Scorpion</div>
+
+            <div id="jade" class="col-sm-2 card ">
+                <img src="./assets/images/jade.png">Jade</div>
+
+            <div id="sonya" class="col-sm-2 card ">
+                <img src="./assets/images/Sonya_1.png">Sonya</div>
+
+            <div id="mileean" class="col-sm-2 card ">
+                <img src="./assets/images/mileena.png">Mileena</div>
+
+            <div id="revenantSindel" class="col-sm-2 card ">
+                <img src="./assets/images/Revenant_Sindel.png">Revenant Sindel</div>
+
+            <div id="goro" class="col-sm-2 card ">
+                <img src="./assets/images/Goro1.png">Goro</div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div id="myFighter" class="col-sm-offset-1 col-sm-3">
+                <h4>Champion</h4>
+            </div>
+            <div id="fight Sign" class="col-sm-2">
+                <div class="actionButtons">
+                    <button type="button" class="btn btn-danger">Attack</button>
+                    <button type="button" class="btn btn-primary">Re Start</button>
+                    <h3>Status</h3>
+                    <br>
+                    <h4>Wins :<span id="wins"></apan>
+                    </h4>
+                    <h4>Loses :<span id="loses"></apan>
+                    </h4>
+                </div>
+            </div>
+            <div id="opponent" class="col-sm-5">
+                <h4>Opponent</h4>
+            </div>
+            <br></div>
+        <footer></footer>
+        <script src="assets/javascript/game.js"></script>
+    </body>
 </html>
