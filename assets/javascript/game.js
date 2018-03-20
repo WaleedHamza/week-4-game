@@ -2,41 +2,41 @@ $(document).ready(function(){
 //code below this line
 
 // game objects each contains a character
-var kenshi = {
-    name: "Kenshi",
-    health: 100,
-    attack: 10,
-    imageUrl: "assets/images/kenshi.png",
-    enemyAttackBack: 15
+var mileena = {
+    name: "mileena",
+    health: 120,
+    attack: 17,
+    counterAttack: 15
 };
 
 var subzero = {
     name: "Sub Zero",
-    health: 100,
-    attack: 10,
-    imageUrl: "assets/images/kenshi.png",
-    enemyAttackBack: 15
+    health: 110,
+    attack: 9,
+    counterAttack: 4
 };
 
 var scorpion = {
     name: "Scorpion",
     health: 100,
-    attack: 10,
-    imageUrl: "assets/images/kenshi.png",
-    enemyAttackBack: 15
+    attack: 12,
+    counterAttack: 7
 };
 
 var jade = {
     name: "Jade",
-    health: 100,
-    attack: 10,
-    imageUrl: "assets/images/kenshi.png",
-    enemyAttackBack: 15
+    health: 90,
+    attack: 20,
+    counterAttack: 13
 };
 
 //create object array for all the charactors//
-var character = [kenshi, subzero, scorpion, jade];
+var defenders=[]
+var character = [mileena, subzero, scorpion, jade];
 var r = Math.floor(Math.random() * character.length);
+
+//set the characters attr//
+$(".crad").push($(this).attr(character))
 
 //moving the fighter selected to the my fighter section function test//
 var fighterSelected = false
@@ -52,12 +52,16 @@ $("#selectFighter").on("click", ".card", function (event) {
 //if 3 fighters were in the opponent section then stop the click function//
 //reset the opponent section fighters//
 var opponentSelected = false
-$("#opponenet").on("click", ".card", function(event) {
-    if (opponentSelected === true){
-        opponentSelected =false;
-    $("#selectFigher").append($(this))
-    }
-})
+$("#opponent").on("click", ".card", function (event) {
+    $(defenders).push($(this).attr("id"))
+    console.log(defenders)
+    if (opponentSelected === true && ($("#oponnent").card <= 3)){
+        $(".card").click (function(){
+            //disable mouse click
+        })
+ 
+  }
+});
 
 // add a function to stop inserting fighters in the opponent div when reach is 3 fighters
 
@@ -74,8 +78,12 @@ $("#opponenet").on("click", ".card", function(event) {
 
 //add function to reset the game// 
 
+    var restart = $("#reset").click(function(){
+        location.reload();
+    });
 
 
+});
+//end of reset function 
 
 //keep your code above this line//
-});

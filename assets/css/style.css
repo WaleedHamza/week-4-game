@@ -32,13 +32,14 @@ h3 {
     height: 200px;
     display: flex;
     justify-content: center;
+    text-align: center;
 
 }
 
 .card {
     position: relative;
     justify-content: center;
-    border: 1px solid goldenrod;
+    border: 3px solid goldenrod;
     background-color: black;
     width: 150px;
     height: 150px;
