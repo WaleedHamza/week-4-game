@@ -31,12 +31,9 @@ var jade = {
 };
 
 //create object array for all the charactors//
-var defenders=[]
+var defenders= []
 var character = [mileena, subzero, scorpion, jade];
 var r = Math.floor(Math.random() * character.length);
-
-//set the characters attr//
-$(".crad").push($(this).attr(character))
 
 //moving the fighter selected to the my fighter section function test//
 var fighterSelected = false
@@ -44,8 +41,10 @@ $("#selectFighter").on("click", ".card", function (event) {
     if (fighterSelected === false) {
         fighterSelected = true;
         $("#myFighter").append($(this))
-    } else if (fighterSelected === true) {
-        $("#opponent").append($(this))
+    } else if (fighterSelected === true && defenders.length<3) {
+        $("#opponent").append($(this));
+        defenders.push($(this).attr("id"));
+        
     }
 });
 
@@ -55,12 +54,10 @@ var opponentSelected = false
 $("#opponent").on("click", ".card", function (event) {
     $(defenders).push($(this).attr("id"))
     console.log(defenders)
-    if (opponentSelected === true && ($("#oponnent").card <= 3)){
-        $(".card").click (function(){
-            //disable mouse click
-        })
- 
-  }
+    if (opponentSelected === true && ($("#oponnent").card <= 3)) {
+        $("#selectFighter").click(false);
+
+    }
 });
 
 // add a function to stop inserting fighters in the opponent div when reach is 3 fighters
@@ -77,7 +74,7 @@ $("#opponent").on("click", ".card", function (event) {
 
 
 //add function to reset the game// 
-
+//This function reloads the page change to reset without reloading the page//
     var restart = $("#reset").click(function(){
         location.reload();
     });
